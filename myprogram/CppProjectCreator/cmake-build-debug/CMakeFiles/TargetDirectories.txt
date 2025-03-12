@@ -1,0 +1,3 @@
+D:/Software/Utils/Nilesoft Shell/myprogram/CppProjectCreator/cmake-build-debug/CMakeFiles/CppProjectCreator.dir
+D:/Software/Utils/Nilesoft Shell/myprogram/CppProjectCreator/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Software/Utils/Nilesoft Shell/myprogram/CppProjectCreator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
