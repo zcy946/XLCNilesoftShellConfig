@@ -52,7 +52,12 @@
 			item(title='XML' cmd=io.file.create('@(dt).xml', '<root></root>'))
 		}
 	}
-	
+	menu(type="file|dir" mode="multiple" title='图像处理' image=icon.burn_disc_image separator="after")
+	{
+		// 针对图片文件
+		item(where=(sel.count>0&sel.file.ext=='.jpg'|sel.file.ext=='.jpeg'|sel.file.ext=='.png') title='拼接选中的 (@sel.count 张) 图片并打码' cmd='E:/STUDY/CPP/OpenCV_STUDY/ImgStitcher/bin/ImgStitcher.exe' args='-i @sel.paths.quote -M')
+		item(type='dir' title='拼接选中的文件夹中的所有图片并打码' cmd='E:/STUDY/CPP/OpenCV_STUDY/ImgStitcher/bin/ImgStitcher.exe' args='-i @sel.paths.quote -M')
+	}	
 	item(mode="single" type="file" title="更改扩展名" image=\uE0B5 cmd=if(input("更改扩展名", "输入扩展名"),
 			io.rename(sel.path, path.join(sel.dir, sel.file.title + "." + input.result))))
 	
@@ -96,8 +101,7 @@
 	{
 		item(title='Register' admin cmd='regsvr32.exe' args='@sel.path.quote' invoke="multiple")
 		item(title='Unregister' admin cmd='regsvr32.exe' args='/u @sel.path.quote' invoke="multiple")
-	}
-	
+	}						
 	
 	item(where=!wnd.is_desktop title=title.folder_options image=icon.folder_options cmd=command.folder_options)
 }

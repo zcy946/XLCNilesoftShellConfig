@@ -27,7 +27,6 @@ remove(find="在终端中打开")
 import 'imports/terminal.nss'
 import 'imports/file-manage.nss'
 import 'imports/project.nss'
-import 'imports/pictures.nss'
 // import 'imports/goto.nss'
 import 'imports/taskbar.nss'
 import 'xialichen/xialichen.nss'
